@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <pokemon-list v-bind:pokemons="pokemons"> </pokemon-list>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PokemonList from "@/components/PokemonList.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
+
   components: {
-    HelloWorld
-  }
-}
+    PokemonList,
+  },
+  mounted() {
+    this.idIncreasing(10);
+    this.fetchPokes();
+  },
+  data: function () {
+    return {
+      pokemons: [],
+    };
+  },
+  methods: {
+    fetchPokes(id) {
+      let url = "https://pokeapi.co/api/v2/pokemon/";
+
+      fetch(url + id)
+        .then((response) => response.json())
+        .then((data) => this.pokemons.push(data));
+    },
+    idIncreasing(number) {
+      for (let i = 0; i <= number; i++) {
+        this.fetchPokes(i);
+      }
+    },
+  },
+};
 </script>
