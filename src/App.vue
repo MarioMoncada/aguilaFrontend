@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav"><router-link to="/">Home</router-link></div>
+    <div id="nav">
+      <router-link to="/"
+        >Poke Home <img class="pokehome" src="./assets/pokehome.png"
+      /></router-link>
+    </div>
     <router-view />
   </div>
 </template>
@@ -27,5 +31,8 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.pokehome {
+  width: 30px;
 }
 </style>

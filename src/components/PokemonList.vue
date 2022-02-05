@@ -18,7 +18,7 @@
         <div class="card-body">
           <h5 class="card-title fw-bold">{{ pokemon.name }}</h5>
 
-          <a href="#" @click="showDescription()" class="btn btn-primary"
+          <a href="#" @click="showDescription(pokemon)" class="btn btn-primary"
             ><router-link class="ruta" to="/descripcion"
               >Descripción</router-link
             ></a
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import { EventBus } from "../main.js";
 export default {
   name: "PokemonList",
   props: ["pokemons"],
@@ -66,7 +67,11 @@ export default {
         this.value2 += -5;
       }
     },
-    showDescription() {},
+    showDescription: function (data) {
+      // se va a enviar la data de cada pokemon.
+
+      EventBus.$emit("dataPoke", data);
+    },
   },
 
   computed: {},
