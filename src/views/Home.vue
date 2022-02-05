@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <img src="../assets/imgtitle.svg" /><br />
+    <img class="ball" src="../assets/pokeball.png" />
+    <h4>POKEDEX</h4>
     <pokemon-list v-bind:pokemons="pokemons"> </pokemon-list>
   </div>
 </template>
@@ -15,7 +18,7 @@ export default {
     PokemonList,
   },
   mounted() {
-    this.idIncreasing(10);
+    this.idIncreasing(20);
     this.fetchPokes();
   },
   data: function () {
@@ -39,3 +42,14 @@ export default {
   },
 };
 </script>
+<style scoped>
+img {
+  width: 300px;
+  height: 150px;
+}
+.ball {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+}
+</style>

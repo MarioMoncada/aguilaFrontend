@@ -1,10 +1,22 @@
 <template>
-  <div class="">
-    <div class="card">
-      <h2>Nombre</h2>
+  <div class="container d-flex">
+    <div
+      v-for="pokemon in pokemons"
+      v-bind:key="pokemon.id"
+      class="card"
+      style="width: 18rem"
+    >
+      <img
+        v-bind:src="pokemon.sprites.back_default"
+        class="card-img-top"
+        alt="pokemons"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ pokemon.name }}</h5>
+
+        <a href="#" class="btn btn-primary">Descripción</a>
+      </div>
     </div>
-    <button @click="splittingArray1()">llenar variable</button>
-    <button @click="splittingArray()">dividiendo</button>
   </div>
 </template>
 
@@ -12,9 +24,7 @@
 export default {
   name: "PokemonList",
   props: ["pokemons"],
-  mounted() {
-    this.splittingArray();
-  },
+  mounted() {},
 
   data() {
     return {
