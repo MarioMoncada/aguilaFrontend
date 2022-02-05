@@ -2,7 +2,7 @@
   <div class="home">
     <img src="../assets/imgtitle.svg" /><br />
     <img class="ball" src="../assets/pokeball.png" />
-    <h4>POKEDEX</h4>
+    <h4 class="text-danger fw-bold">POKEDEX</h4>
     <pokemon-list v-bind:pokemons="pokemons"> </pokemon-list>
   </div>
 </template>
