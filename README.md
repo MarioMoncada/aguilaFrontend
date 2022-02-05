@@ -17,10 +17,17 @@ Para llevar a cabo esta tarea, se debe clonar el repositorio que se encuentra en
 El proyecto lleva por nombre AguilaFronted.
 una vez se ha clonado el codigo fuente se debe abrir el editor de preferencia.
 una vez se haya abierto el proyecto en el editor de codigo, se procede a hacer uso de la temrinal y se navega por este hasta llegar a al directorio llamdo aguila-source, luego se presiona:
+
+#### Instalar las librerias.
+
 npm install.
 y cuando termine la instalación se inicia el servidor en local para visualizar la aplicación. escribiendo el siguiente comando.
+
+#### Iniciar servidor
+
 npm run serve.
-y listo.
+
+Y listo.
 
 Ya puedes revisar editar y o reutilizar este codigo.
 
