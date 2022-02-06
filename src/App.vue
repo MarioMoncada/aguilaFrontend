@@ -6,9 +6,17 @@
       /></router-link>
     </div>
     <router-view />
+    <language></language>
   </div>
 </template>
-
+<script>
+import Language from "../src/components/Language.vue";
+export default {
+  components: {
+    Language,
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

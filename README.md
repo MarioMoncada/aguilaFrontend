@@ -1,6 +1,4 @@
-# aguila-source
-
-## Pokedex app
+# Pokedex app
 
 Esta aplicación permite a los usuarios navegar entre tarjetas paginadas, y en las cuales podrá consultar informacion de pokemones.
 
@@ -21,7 +19,8 @@ una vez se haya abierto el proyecto en el editor de codigo, se procede a hacer u
 #### Instalar las librerias.
 
 npm install.
-y cuando termine la instalación se inicia el servidor en local para visualizar la aplicación. escribiendo el siguiente comando.
+
+Y cuando termine la instalación se inicia el servidor en local para visualizar la aplicación. escribiendo el siguiente comando.
 
 #### Iniciar servidor
 

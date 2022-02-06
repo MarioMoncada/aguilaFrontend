@@ -2,7 +2,7 @@
   <div>
     <div class="container d-flex">
       <button class="btn btn-warning" @click.prevent="previustItems()">
-        Anterior
+        {{ $t("previus") }}
       </button>
       <div
         v-for="pokemon in pokemons.slice(value1, value2)"
@@ -19,15 +19,15 @@
           <h5 class="card-title fw-bold">{{ pokemon.name }}</h5>
 
           <a href="#" @click="showDescription(pokemon)" class="btn btn-primary"
-            ><router-link class="ruta" to="/descripcion"
-              >Descripción</router-link
+            ><router-link class="ruta" to="/descripcion">
+              {{ $t("description") }}</router-link
             ></a
           >
         </div>
       </div>
 
       <button class="btn btn-warning" @click.prevent="nextItems()">
-        Siguiente
+        {{ $t("nextText") }}
       </button>
     </div>
     <div class="mt-3 d-flex"></div>

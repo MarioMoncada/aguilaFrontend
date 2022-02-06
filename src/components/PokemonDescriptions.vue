@@ -1,9 +1,6 @@
 <template>
   <div class="container">
-    <div
-      class="card tarjeta bg-warning border-primary border-5 p"
-      style="width: 230px"
-    >
+    <div class="card tarjeta bg-warning p" style="width: 230px">
       <h3 class="card-title pt-2 text-danger">{{ poke.name }}</h3>
 
       <img
@@ -12,15 +9,15 @@
         alt="..."
       />
       <div class="card-body my-3 text-danger fw-bold">
-        <h6 class="fw-bold">Experiencia</h6>
+        <h6 class="fw-bold">{{ $t("experience") }}</h6>
         <span>{{ poke.base_experience }}</span>
       </div>
       <ul class="list-group border-0">
         <li class="list mb-1 bg-primary">
-          Abilidad #1 : {{ poke.abilities[0].ability.name }}
+          {{ $t("ability") }} #1 : {{ poke.abilities[0].ability.name }}
         </li>
         <li class="list mb-1 bg-primary">
-          Abilidad #2 : {{ poke.abilities[1].ability.name }}
+          {{ $t("ability") }} #2 : {{ poke.abilities[1].ability.name }}
         </li>
       </ul>
     </div>
@@ -58,7 +55,9 @@ export default {
 .tarjeta {
   margin-left: 40%;
   margin-top: 30px;
-
+  -webkit-box-shadow: 0px 10px 13px -7px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   border-radius: 20px;
 }
 .img-container {
