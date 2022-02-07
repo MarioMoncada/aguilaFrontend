@@ -52,18 +52,18 @@ export default {
 
   methods: {
     nextItems() {
-      if (this.value1 >= 0 && this.value1 <= 10) {
+      if (this.value1 >= 0 && this.value1 <= 50) {
         this.value1 += +5;
       }
-      if (this.value2 <= 15) {
+      if (this.value2 <= 55) {
         this.value2 += +5;
       }
     },
     previustItems() {
-      if (this.value1 <= 15 && this.value1 >= 5) {
+      if (this.value1 <= 55 && this.value1 >= 5) {
         this.value1 += -5;
       }
-      if (this.value2 >= 10) {
+      if (this.value2 <= 60 && this.value2 >= 10) {
         this.value2 += -5;
       }
     },

@@ -18,7 +18,7 @@ export default {
     PokemonList,
   },
   mounted() {
-    this.idIncreasing(40);
+    this.idIncreasing(60);
     this.fetchPokes();
   },
   data: function () {
@@ -38,7 +38,6 @@ export default {
     idIncreasing(number) {
       for (let i = 1; i <= number; i++) {
         this.fetchPokes(i);
-        console.log(i);
       }
     },
   },
