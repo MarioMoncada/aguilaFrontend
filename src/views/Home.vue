@@ -18,7 +18,7 @@ export default {
     PokemonList,
   },
   mounted() {
-    this.idIncreasing(20);
+    this.idIncreasing(40);
     this.fetchPokes();
   },
   data: function () {
@@ -32,11 +32,13 @@ export default {
 
       fetch(url + id)
         .then((response) => response.json())
-        .then((data) => this.pokemons.push(data));
+        .then((data) => this.pokemons.push(data))
+        .catch((error) => console.error("Error:", error));
     },
     idIncreasing(number) {
-      for (let i = 0; i <= number; i++) {
+      for (let i = 1; i <= number; i++) {
         this.fetchPokes(i);
+        console.log(i);
       }
     },
   },
